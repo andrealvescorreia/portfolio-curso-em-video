@@ -55,3 +55,57 @@ nav#menu a:hover {
   background-color: var(--destaque-inverso);
   color: var(--texto);
 }
+
+main {
+  display: grid;
+  grid-template-columns: auto 90vw auto;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+section#ficha {
+  grid-column: 2;
+  background-color: var(--fundo-card);
+  padding: 20px;
+  border-radius: 5px;
+}
+
+section#ficha img.foto {
+  width: 200px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 100%;
+  border: 5px solid var(--fundo-card);
+  outline: 5px solid var(--destaque);
+
+  /*centraliza a imagem*/
+  display: block;
+  margin: auto;
+
+  margin-bottom: 15px;
+}
+
+section#ficha h1 {
+  color: var(--destaque);
+  margin: 15px 0;
+  font-size: 1.5em;
+}
+
+div#social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  font-size: 1.6em; /* tamanho dos ícones */
+  margin-top: 15px;
+}
+
+div#social a {
+  color: var(--destaque);
+  transition: color 0.3s;
+}
+
+div#social a:hover {
+  color: var(--destaque-inverso);
+}
