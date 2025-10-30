@@ -148,12 +148,6 @@ article h2 {
   gap: 30px;
 }
 
-@media screen and (min-width: 768px) {
-  #skill-container {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
 #skill-container .info {
   display: flex;
   justify-content: space-between;
@@ -213,4 +207,74 @@ article h2 {
 #formacao-container .instituicao {
   color: var(--destaque);
   font-size: 1.3em;
+}
+
+#projetos-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#projetos-container .projeto {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: var(--fundo-principal);
+  padding: 10px;
+  border-radius: 8px;
+  border-left: 5px solid var(--destaque-inverso);
+  transition: border 0.5s;
+}
+
+#projetos-container .projeto:hover {
+  border-left-width: 11px;
+  border-color: var(--destaque);
+  cursor: pointer;
+}
+
+#projetos-container .foto {
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+footer {
+  background-color: var(--destaque);
+  color: var(--texto-inverso);
+  padding: 15px;
+  text-align: center;
+}
+
+footer a {
+  color: var(--texto-inverso);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  color: var(--destaque-inverso);
+}
+
+@media screen and (min-width: 768px) {
+  #skill-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #projetos-container .projeto {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  #projetos-container .info {
+    max-width: 80%;
+  }
+
+  #projetos-container .foto {
+    aspect-ratio: 1/1;
+    max-width: 20%;
+    max-height: 200px;
+    width: 100%;
+  }
 }
